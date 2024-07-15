@@ -68,7 +68,7 @@ def request_ocr(image_data, image_format):
     # 응답 확인
     if response.status_code == 200:
         result = response.json()
-        print(json.dumps(result, indent=4, ensure_ascii=False))
+        # print(json.dumps(result, indent=4, ensure_ascii=False))
     else:
         print(f"Error: {response.status_code}")
         print(response.text)
