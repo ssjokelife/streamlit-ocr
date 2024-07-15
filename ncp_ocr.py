@@ -1,15 +1,16 @@
 import os
 
-from dotenv import load_dotenv
+# from dotenv import load_dotenv
 import base64
-
+import streamlit as st
 import requests
 import json
 
-load_dotenv()
+# load_dotenv()
 # OCR API 엔드포인트 URL
 ocr_url = "https://a4si57wev1.apigw.ntruss.com/custom/v1/30946/9f18bfacfd98fb975e7844826ba6c78ac5c30dc64cf0d702f815472661cc83c1/general"
-api_key = os.getenv("API_KEY")
+# api_key = os.getenv("API_KEY")
+api_key = st.secrets["API_KEY"]
 
 
 def parse_ocr_response(response):
