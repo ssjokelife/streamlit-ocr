@@ -12,8 +12,8 @@ PASSWORD = "thomas4506"
 # 'Buy Me a Coffee' 버튼 HTML 및 CSS 코드
 buy_me_a_coffee_button = """
 <div style="position: fixed; bottom: 70px; right: 10px;">
-    <a href="https://www.buymeacoffee.com/your_username" target="_blank">
-        <img src="https://img.buymeacoffee.com/button-api/?text=Buy me a coffee&emoji=&slug=your_username&button_colour=FFDD00&font_colour=000000&font_family=Arial&outline_colour=000000&coffee_colour=ffffff" />
+    <a href="https://www.buymeacoffee.com/ssjokelife" target="_blank">
+        <img src="https://img.buymeacoffee.com/button-api/?text=Buy me a coffee&emoji=&slug=ssjokelife&button_colour=FFDD00&font_colour=000000&font_family=Arial&outline_colour=000000&coffee_colour=ffffff" />
     </a>
 </div>
 """
