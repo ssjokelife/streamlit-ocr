@@ -1,9 +1,7 @@
-import io
-
 import streamlit as st
 from PIL import Image
 
-import ncp_ocr
+import gcp_vision
 
 
 # 비밀번호 설정
@@ -52,13 +50,8 @@ if check_password():
             with st.status("OCR 요청 중...", expanded=True):
                 result = ""
                 for uploaded_file in uploaded_files:
-                    image = Image.open(uploaded_file)
-                    # 이미지를 BytesIO 객체로 변환
-                    image_data = io.BytesIO()
-                    image.save(image_data, format=image.format)
-
-                    # OCR 요청
-                    temp = ncp_ocr.request_ocr(image_data, image.format.lower())
+                    image_content = uploaded_file.read()
+                    temp = gcp_vision.detect_text_in_image(image_content)
                     result += temp + "\n"
                     result += "=" * 80 + "\n"
 
