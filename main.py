@@ -40,10 +40,21 @@ def check_password():
     else:
         return True
 
-
 if check_password():
     # 여러 파일 업로드를 허용
     uploaded_files = st.file_uploader("Choose images", accept_multiple_files=True, type=["png", "jpg", "jpeg"])
+
+    # 언어 선택 박스
+    language_option = st.selectbox("언어를 선택하세요:", ["한글", "희랍어", "영어"])
+
+    # 선택한 언어에 따라 language_hints 설정
+    language_hints = {
+        "한글": "ko",
+        "희랍어": "el",
+        "영어": "en"
+    }
+
+    selected_language = language_hints.get(language_option, "en")  # 기본값은 영어
 
     if st.button("요청"):
         if len(uploaded_files) > 0:
@@ -51,7 +62,7 @@ if check_password():
                 result = ""
                 for uploaded_file in uploaded_files:
                     image_content = uploaded_file.read()
-                    temp = gcp_vision.detect_text_in_image(image_content)
+                    temp = gcp_vision.detect_text_in_image(image_content, selected_language)
                     result += temp + "\n"
                     result += "=" * 80 + "\n"
 
