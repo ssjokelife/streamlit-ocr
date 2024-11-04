@@ -3,19 +3,6 @@ import streamlit as st
 from google.cloud import vision
 from google.oauth2 import service_account
 
-# service_account_info = {
-#   "type": "service_account",
-#   "project_id": "python-spreadsheet-419221",
-#   "private_key_id": "aa484c1a1b0d6cb353958cf596191f43cb5f3117",
-#   "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQDghfMx2cOKtw0k\ndBcB3EOL46B6KB+irYM6DrBSg3UklM6SaFKEqjQXOyKv8EV83WiwNfZrQn3l0+6B\nBMCHDdHk/+QsuXVuC+hPjslDzhEEy298cwfIDF/osJi9MRZlm4jTYJ/7vk1Vpza2\n8+fp/mLbNgBqrTiynM3a4vLX4flSgs5Ed0YQ6DdoSfm4tHMwjkBGRQeeM+3YKtDn\nz2ilqqwN2ndLQxoTAz350k1gafqOgE0MdJ4ZV0tjfzRLT6+YcBVxI6qFsucBLfQ5\ngYYQ3e+9NE0MsewfnrzFrSRUvYUiyWnstkW6Z3mJAsO47CyhoKTHGQBsJAuIKTgG\nJPfoK08HAgMBAAECggEABSX45VM8jhApNwVGDFEKGxIJLI+kPP9o8/LSNePCQcqU\n7rMbOY6s5sYAh4S6jU92AByn27O1lWZypNjrJeuCknFDjYeni+nhQIbVSaDW/HaX\nvXwIkJyWskfvcKuu6kpoBmsy9DL+Aj4XTJgRHItOtzJtCSdPFozd2hLAfWHqF56V\n9wGgmoqDOxck1SLgoZGj3Sr0LRv2cyxDZpFbApjDTmQi3tOLzAqz+YODfWpBO57/\nYY2AToNXiTJX7M6cFlFHh9cK7s58MYuWF5m1ySN26sshRsFyforzI+lKDMBKRg6/\nVZVV1muJkFIJUpjkGMCPs4QaFoQbxnYZ6y6+j8/EDQKBgQD4zQcrgMoukcXWulIx\nOKz5vxYuYQaKaW2ntRP5mi/NjF4JALf0uNHwxxdXdIzDnoZur1du+jQo0Fnsz9Lr\nkfC8W964abfJCHJMdqIEQdmTmTpeTNDMXrlzmE/xz2HQJgaTzWRrt1XjgdIN7R7H\n66EDgRbp9RWy6oFOf0uPtbrF/QKBgQDnBRZZWVFd04cnWMP0Z5LZ2mt8j+qiXbZ4\neB/KyyAZZKNeW7ZWbtPzhwdEPSSczQmI9Rx1Xeu+wMZzoQ42sM9nyuRtvK7FUKTd\n/JaNmxXFlaITXFgW9ZbqTZ47sjAtfgJz/Qhv/3YkZhlqZeacvm1CfM9cnmtfFrTp\n29357Iz2UwKBgQDHnojQKKcPMjpPjHKBt31hbCV51LMQvoISesCqFUGhY6vXAVKW\n8OrQiox5yLNgCILHr7sw+WJ8FJ7x19Tc2N0T44oQ4BFrJHHAU7auP784I0qnem5U\navPUgTIzSzapcLj6QWL+4bvxq6lDLyrxMGahjyM5V0CvqmNQ/eU8SoyuaQKBgHS9\nCF8cGFa+VjSW0WaGlBmMGva1zs4/Zr6XjREv9cd/KGK9G3WvyWDtIcnkz8SAg8n2\nemwAiuk4hs/VWdZfIF+Fkkq1pudEahtW0Uk7ThQrGdyItGbdsWYy1Lu7vkauv1SX\nT5Uw1SVthnhSh+c6/wEzCqH117IUSlVGanQpic3LAoGBANuYVo/Q+3/LKGBn1nN/\nPBkJnbEvisxTnYlcG0FvMqbt6TPS6LGuHJHAswMUxr95AopnqYseEIckP1ggHnrn\nVbVUpwb2jyjrdmKbsypHQ6mBuUX+lCHpoXQsbTYqi8QkshZ75+dKLrijId2omH1t\nETEhVAhb1ubvOhYEk795KnWZ\n-----END PRIVATE KEY-----\n",
-#   "client_email": "python-spreadsheet@python-spreadsheet-419221.iam.gserviceaccount.com",
-#   "client_id": "113427643310125596691",
-#   "auth_uri": "https://accounts.google.com/o/oauth2/auth",
-#   "token_uri": "https://oauth2.googleapis.com/token",
-#   "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
-#   "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/python-spreadsheet%40python-spreadsheet-419221.iam.gserviceaccount.com",
-#   "universe_domain": "googleapis.com"
-# }
 
 # 서비스 계정 정보 구성
 service_account_info = {
